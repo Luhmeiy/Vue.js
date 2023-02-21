@@ -1,24 +1,29 @@
+<script lang="ts" setup>
+import { onBeforeMount, onMounted, ref } from "vue";
+
+const name = ref("Ainda não sei");
+
+const lifeCycle = () => {
+	console.log("Executou!");
+};
+
+onBeforeMount(() => {
+	setTimeout(() => {
+		name.value = "Medeiros";
+	}, 1000);
+
+	lifeCycle();
+});
+
+onMounted(() => {
+	setTimeout(() => {
+		name.value = "Luiz";
+	}, 2000);
+
+	lifeCycle();
+});
+</script>
+
 <template>
 	<h1>Meu nome é {{ name }}</h1>
 </template>
-
-<script lang="ts">
-export default {
-	name: "LifeCycle",
-	data() {
-		return {
-			name: "Ainda não sei",
-		};
-	},
-	created() {
-		setTimeout(() => {
-			this.name = "Medeiros";
-		}, 1000);
-	},
-	mounted() {
-		setTimeout(() => {
-			this.name = "Luiz";
-		}, 2000);
-	},
-};
-</script>
