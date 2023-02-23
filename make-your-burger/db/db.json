@@ -86,19 +86,31 @@
         "Bacon",
         "Pepino"
       ],
-      "status": "Solicitado",
+      "status": "Finalizado",
       "id": 1
     },
     {
-      "name": "Zeca",
-      "meat": "Alcatra",
-      "bread": "Parmesão e Orégano",
+      "name": "Estevão",
+      "meat": "Picanha",
+      "bread": "Italiano Branco",
       "optional": [
+        "Bacon",
         "Cebola roxa",
         "Tomate"
       ],
-      "status": "Solicitado",
-      "id": 2
+      "status": "Em produção",
+      "id": 3
+    },
+    {
+      "name": "Marcia",
+      "meat": "Picanha",
+      "bread": "Italiano Branco",
+      "optional": [
+        "Cheddar",
+        "Bacon"
+      ],
+      "status": "Em produção",
+      "id": 4
     }
   ]
 }

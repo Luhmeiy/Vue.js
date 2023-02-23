@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { onMounted, ref } from "vue";
+import Message from "./Message.vue";
 
 interface DataProps {
 	id: number;
@@ -15,6 +16,7 @@ const bread = ref<string | null>(null);
 const meat = ref<string | null>(null);
 const optional = ref([]);
 
+const msg = ref<string | null>(null);
 const isDataFetched = ref(false);
 
 const getIngredients = async () => {
@@ -49,6 +51,9 @@ const createBurger = async () => {
 
 	const res = await req.json();
 
+	msg.value = `Pedido Nº ${res.id} realizado com sucesso`;
+	setTimeout(() => (msg.value = ""), 3000);
+
 	name.value = "";
 	meat.value = "";
 	bread.value = "";
@@ -60,6 +65,8 @@ onMounted(getIngredients);
 
 <template>
 	<div>
+		<Message :msg="msg!" v-show="msg" />
+
 		<div>
 			<form
 				id="burger-form"
@@ -103,7 +110,6 @@ onMounted(getIngredients);
 						<input
 							type="checkbox"
 							name="optional"
-							id="optional"
 							v-model="optional"
 							:value="opt.type"
 						/>
@@ -145,7 +151,11 @@ onMounted(getIngredients);
 	input,
 	select {
 		padding: 5px 10px;
-		width: 300px;
+		width: 100%;
+
+		&[type="submit"] {
+			max-width: 300px;
+		}
 	}
 
 	&#optional-container {
@@ -157,7 +167,6 @@ onMounted(getIngredients);
 		}
 
 		& .checkbox-container {
-			align-items: flex-start;
 			display: flex;
 			margin-bottom: 20px;
 			width: 50%;

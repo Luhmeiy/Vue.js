@@ -6,13 +6,13 @@ defineProps({
 </script>
 
 <template>
-	<div id="nav">
+	<nav id="nav">
 		<router-link to="/" id="logo_url">
 			<img :src="logo" :alt="alt" id="logo" />
 		</router-link>
 		<router-link to="/">Home</router-link>
 		<router-link to="/pedidos">Pedidos</router-link>
-	</div>
+	</nav>
 </template>
 
 <style lang="scss" scoped>
