@@ -7,3 +7,4 @@ Collection of small Vue.js projects developed during courses or using tutorials.
 Developed during [Curso de Vue 3](https://www.youtube.com/playlist?list=PLnDvRpP8BnezDglaAvtWgQXzsOmXUuRHL) course (available for free on YouTube) by [Matheus Battisti](https://www.youtube.com/@MatheusBattisti):
 
 -   basics
+-   make-your-burger
