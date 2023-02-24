@@ -79,14 +79,15 @@
   ],
   "burgers": [
     {
-      "name": "Luiz Henrique Medeiros dos Santos",
+      "name": "Luiz Henrique",
       "meat": "Veggie burger",
       "bread": "3 Queijos",
       "optional": [
-        "Bacon",
-        "Pepino"
+        "Salame",
+        "Tomate",
+        "Cheddar"
       ],
-      "status": "Finalizado",
+      "status": "Solicitado",
       "id": 1
     },
     {
